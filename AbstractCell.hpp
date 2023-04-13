@@ -14,5 +14,4 @@ class AbstractCell {
 };
 
 
-
 #endif
