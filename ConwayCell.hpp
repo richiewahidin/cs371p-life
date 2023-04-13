@@ -5,7 +5,9 @@
 
 class ConwayCell : public AbstractCell {
     public:
-        ConwayCell(bool);      
+        ConwayCell(bool);
+        ConwayCell& operator=(ConwayCell& rhs);
+        void update(int n_neighbors);    
 };
 
 #endif
