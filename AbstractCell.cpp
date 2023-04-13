@@ -1,5 +1,5 @@
 #include "AbstractCell.hpp"
 
- bool isAlive() const {
+bool AbstractCell::isAlive() const {
     return _alive;
- }
+}
