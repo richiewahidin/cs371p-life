@@ -4,10 +4,12 @@
 #include "AbstractCell.hpp"
 
 class ConwayCell : public AbstractCell {
+
     public:
         ConwayCell(bool);
         ConwayCell& operator=(ConwayCell& rhs);
-        void update(int n_neighbors);    
+        bool update(int n_neighbors);    
+        
 };
 
 #endif

@@ -8,7 +8,7 @@ class AbstractCell {
     public:
         AbstractCell(bool alive) : _alive(alive) {}
         bool isAlive() const;
-        virtual void update(int) = 0;
+        virtual bool update(int) = 0;
         virtual AbstractCell& operator= (AbstractCell&) = 0;
 
 };
