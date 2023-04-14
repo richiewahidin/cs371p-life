@@ -13,7 +13,7 @@ class Cell {
         bool update (int);
         void mutate ();
         void clone(Cell& other);
+        ~Cell();
 }
-
 
 #endif
