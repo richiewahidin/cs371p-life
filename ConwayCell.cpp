@@ -6,11 +6,12 @@ ConwayCell::ConwayCell(ConwayCell& other) : AbstractCell(other._alive){}
 
 ConwayCell& ConwayCell::operator=(ConwayCell& rhs) = default;
 
-int ConwayCell::update(int n_neighbors) {
-    if (_alive && n_neighbors != 2 && n_neighbors != 3) {
+int ConwayCell::update(int cardinalNeighbors, int diagonalNeighbors) {
+    int totalNeighbors = cardinalNeighbors + diagonalNeighbors;
+    if (_alive && totalNeighbors != 2 && totalNeighbors != 3) {
         _alive = false;
         return -1;
-    } else if (!_alive && n_neighbors == 3) {
+    } else if (!_alive && totalNeighbors == 3) {
         _alive = true;
         return 1;
     }

@@ -1,19 +1,18 @@
-#include "ConwayCell.hpp"
-#include "FredkinCell.hpp"
+
 #include "Cell.hpp"
 
 Cell::Cell(bool isConway) : Cell(isConway, false) {}
 
-// Cell::Cell(bool isConway, bool isAlive) {
-//     if (isConway) {
-//         ptr = new ConwayCell(isAlive);
-//     } else {
-//         ptr = new FredkinCell(isAlive);
-//     }
-// }
+Cell::Cell(bool isConway, bool isAlive) {
+    if (isConway) {
+        ptr = new ConwayCell(isAlive);
+    } else {
+        ptr = new FredkinCell(isAlive);
+    }
+}
 
-int Cell::update (int n_neighbors) {
-    return ptr->update(n_neighbors);
+int Cell::update (int cardinalNeighbors, int diagonalNeighbors) {
+    return ptr->update(cardinalNeighbors, diagonalNeighbors);
 }
 
 // only if Life instantiated with Cell and reached the age of 2

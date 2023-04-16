@@ -10,7 +10,7 @@ class FredkinCell : public AbstractCell {
     public:
         FredkinCell(bool);
         FredkinCell(FredkinCell&);
-        int update(int);
+        int update(int cardinalNeighbors, int diagonalNeighbors);
         FredkinCell& operator= (FredkinCell&);
         FredkinCell* clone ();
         ~FredkinCell() = default;
