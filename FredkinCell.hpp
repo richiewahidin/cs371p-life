@@ -9,8 +9,11 @@ class FredkinCell : public AbstractCell {
         int _age;
     public:
         FredkinCell(bool);
-        bool update(int);
+        FredkinCell(FredkinCell&);
+        int update(int);
         FredkinCell& operator= (FredkinCell&);
+        FredkinCell* clone ();
+        ~FredkinCell() = default;
 }
 
 #endif

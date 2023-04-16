@@ -7,9 +7,11 @@ class ConwayCell : public AbstractCell {
 
     public:
         ConwayCell(bool);
+        ConwayCell(ConwayCell&);
         ConwayCell& operator=(ConwayCell& rhs);
-        bool update(int n_neighbors);    
-        
+        int update(int n_neighbors);    
+        ConwayCell* clone();
+        ~ConwayCell() = default;
 };
 
 #endif

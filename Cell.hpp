@@ -10,7 +10,7 @@ class Cell {
     public:
         Cell(bool isConway);
         Cell(bool isConway, bool isAlive);
-        bool update (int);
+        int update (int);
         void mutate ();
         void clone(Cell& other);
         ~Cell();

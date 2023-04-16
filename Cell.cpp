@@ -12,7 +12,7 @@ Cell::Cell(bool isConway, bool isAlive) {
     }
 }
 
-bool Cell::update (int n_neighbors) {
+int Cell::update (int n_neighbors) {
     return ptr->update(n_neighbors);
 }
 
@@ -25,16 +25,10 @@ void Cell::mutate() {
 }
 
 void Cell::clone(Cell& other) {
-    if (!ptr) {
-        // other is a ConwayCell
-        if (typeid(*(other.ptr)) == typeid(ConwayCell)) {
-            ptr = new ConwayCell();
-
-        } else { // other is a FredkinCell
-            ptr = new FredkinCell();
-        }
+    if (ptr) {
+        delete ptr;
     }
-    *ptr = *(other.ptr);
+    ptr = (other.ptr)->clone();
 }
 
 Cell::~Cell() {
