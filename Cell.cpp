@@ -4,13 +4,13 @@
 
 Cell::Cell(bool isConway) : Cell(isConway, false) {}
 
-Cell::Cell(bool isConway, bool isAlive) {
-    if (isConway) {
-        ptr = new ConwayCell(isAlive);
-    } else {
-        ptr = new FredkinCell(isAlive);
-    }
-}
+// Cell::Cell(bool isConway, bool isAlive) {
+//     if (isConway) {
+//         ptr = new ConwayCell(isAlive);
+//     } else {
+//         ptr = new FredkinCell(isAlive);
+//     }
+// }
 
 int Cell::update (int n_neighbors) {
     return ptr->update(n_neighbors);

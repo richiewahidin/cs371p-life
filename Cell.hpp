@@ -9,7 +9,7 @@ class Cell {
         AbstractCell *ptr = nullptr;
     public:
         Cell(bool isConway);
-        Cell(bool isConway, bool isAlive);
+        // Cell(bool isConway, bool isAlive);
         int update (int);
         void mutate ();
         void clone(Cell& other);
