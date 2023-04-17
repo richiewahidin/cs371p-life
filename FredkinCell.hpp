@@ -11,9 +11,10 @@ class FredkinCell : public AbstractCell {
         FredkinCell(bool);
         FredkinCell(FredkinCell&);
         int update(int cardinalNeighbors, int diagonalNeighbors);
-        FredkinCell& operator= (FredkinCell&);
+        // FredkinCell& operator= (FredkinCell&);
         FredkinCell* clone ();
         ~FredkinCell() = default;
-}
+        ostream& display(ostream& os);
+};
 
 #endif

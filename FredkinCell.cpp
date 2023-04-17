@@ -27,8 +27,20 @@ int FredkinCell::update(int cardinalNeighbors, int diagonalNeighbors) {
     }
 }
 
-FredkinCell& FredkinCell::operator= (FredkinCell&) = default;
+// FredkinCell& FredkinCell::operator= (FredkinCell&) = default;
 
 FredkinCell* FredkinCell::clone() {
     return new FredkinCell(*this);
+}
+
+ostream& FredkinCell::display(ostream& os) {
+    char symbol; 
+    if (_alive && _age >= 10) {
+        symbol = '+';
+    } else if (_alive) {
+        _age >> symbol;
+    } else {
+        symbol = '-';
+    }
+    return os << symbol;
 }

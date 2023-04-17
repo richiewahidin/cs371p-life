@@ -9,4 +9,5 @@ RunLifeConway
 RunLifeFredkin
 RunLifeCell
 TestLife
-
+.vscode/
+settings.json

@@ -4,7 +4,7 @@ ConwayCell::ConwayCell(bool alive) : AbstractCell(alive){}
 
 ConwayCell::ConwayCell(ConwayCell& other) : AbstractCell(other._alive){} 
 
-ConwayCell& ConwayCell::operator=(ConwayCell& rhs) = default;
+// ConwayCell& ConwayCell::operator=(ConwayCell& rhs) = default;
 
 int ConwayCell::update(int cardinalNeighbors, int diagonalNeighbors) {
     int totalNeighbors = cardinalNeighbors + diagonalNeighbors;
@@ -20,4 +20,9 @@ int ConwayCell::update(int cardinalNeighbors, int diagonalNeighbors) {
 
 ConwayCell* ConwayCell::clone() {
     return new ConwayCell(*this);
+}
+
+ostream& ConwayCell::display(ostream& os) {
+    char symbol = _alive ? '*' : '.';
+    return os << symbol;
 }
