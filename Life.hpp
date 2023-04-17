@@ -83,12 +83,14 @@ class Life {
 
         // print function that prints the state of each cell each round
         void print() {
+            cout << "Generation = " << curr_round << ", Population = " << population << "." << endl;
             for (int i = 1; i < grid.size() + 1; ++i) {
                 for (int j = 1; j < grid[0].size(); ++j) {
                     cout << grid[i][j];
                 }
                 cout << endl;
             }
+            cout << endl;
         }
 
 

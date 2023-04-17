@@ -83,9 +83,9 @@ push:
 	-git add html
 	git add Makefile
 	git add README.md
-	git add RunLife.cpp
+	git add Runlife.hpp
 	-git add RunLife.ctd.txt
-	git add TestLife.cpp
+	git add Testlife.cpp
 	git commit -m "another commit"
 	git push
 	git status
@@ -95,25 +95,25 @@ CLASS_FILES := \
 	ConwayCell.cpp \
 	FredkinCell.cpp \
 	Cell.cpp \
-	Life.cpp
+	life.hpp
 
 # compile run harness for Conway
-RunLifeConway: AbstractCell.cpp ConwayCell.cpp Life.cpp RunLifeConway.cpp
+RunLifeConway: AbstractCell.cpp ConwayCell.cpp Cell.cpp Life.hpp RunLifeConway.cpp
 	-$(CPPCHECK) RunLifeConway.cpp
 	$(CXX) $(CXXFLAGS) $(CLASS_FILES) RunLifeConway.cpp -o RunLifeConway
 
 # compile run harness for Fredkin
-RunLifeFredkin: AbstractCell.cpp FredkinCell.cpp Life.cpp RunLifeFredkin.cpp
+RunLifeFredkin: AbstractCell.cpp FredkinCell.cpp Cell.cpp Life.hpp RunLifeFredkin.cpp
 	-$(CPPCHECK) RunLifeFredkin.cpp
 	$(CXX) $(CXXFLAGS) $(CLASS_FILES) RunLifeFredkin.cpp -o RunLifeFredkin
 
 # compile run harness for Cell
-RunLifeCell: AbstractCell.cpp Cell.cpp Life.cpp RunLifeCell.cpp
+RunLifeCell: AbstractCell.cpp Cell.cpp Life.hpp RunLifeCell.cpp
 	-$(CPPCHECK) RunLifeCell.cpp
 	$(CXX) $(CXXFLAGS) $(CLASS_FILES) RunLifeCell.cpp -o RunLifeCell
 
 # compile test harness
-TestLife: 	AbstractCell.cpp ConwayCell.cpp FredkinCell.cpp Cell.cpp Life.cpp TestLife.cpp
+TestLife: 	AbstractCell.cpp ConwayCell.cpp FredkinCell.cpp Cell.cpp Life.hpp TestLife.cpp
 	-$(CPPCHECK) TestLife.cpp
 	$(CXX) $(CXXFLAGS) $(CLASS_FILES) TestLife.cpp -o TestLife $(LDFLAGS)
 

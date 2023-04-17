@@ -24,16 +24,17 @@ void run_testcase() {
     cin >> n_sims;
     cin >> freq;
 
-    // Life life(r, c, live_cell_coords);
+    Life life(r, c, live_cell_coords);
+    cout << "*** Life<ConwayCell> " << r << "x" << c << " ***" << endl;
+    cout << endl;
     
-    // // run rounds 
-    // for (int curr_round = 0; curr_round < n_sims; ++curr_round) {
-    //     if (curr_round % freq == 0) {
-            
-    //     }
-        
-    // }
-
+    // run rounds 
+    for (int curr_round = 0; curr_round < n_sims; ++curr_round) {
+        if (curr_round % freq == 0) {
+            life.print(curr_round);
+        }
+        life.do_round();
+    }
 
 }
 
