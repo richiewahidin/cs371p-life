@@ -17,6 +17,7 @@ class Cell {
         void mutate ();
         void clone(Cell& other);
         ~Cell();
+        ostream& display(ostream& os);
 }
 
 #endif

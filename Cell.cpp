@@ -36,3 +36,7 @@ Cell::~Cell() {
         ptr = nullptr;
     }
 }
+
+ostream& Cell::display(ostream& os) {
+    return ptr->display(os);
+}
