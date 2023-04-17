@@ -22,7 +22,7 @@ ConwayCell* ConwayCell::clone() {
     return new ConwayCell(*this);
 }
 
-ostream& ConwayCell::display(ostream& os) {
+ostream& ConwayCell::write (ostream& out) const {
     char symbol = _alive ? '*' : '.';
-    return os << symbol;
-}
+    return out << symbol;
+};

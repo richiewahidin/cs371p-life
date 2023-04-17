@@ -5,15 +5,20 @@ using namespace std;
 
 class AbstractCell {
 
+    friend ostream& operator<<(ostream& lhs, const AbstractCell& rhs) {
+        return rhs.write(lhs);
+    };
+
     protected:
         bool _alive; // 0 dead 1 alive
+        virtual ostream& write (ostream& out) const = 0;
+
     public:
         AbstractCell(bool alive) : _alive(alive) {};
         virtual int update(int cardinalNeighbors, int diagonalNeighbors) = 0;
         // virtual AbstractCell& operator= (AbstractCell&) = 0;
         virtual AbstractCell* clone() = 0;
         virtual ~AbstractCell() = default;
-        virtual ostream& display(ostream& os) = 0;
 
 };
 

@@ -14,7 +14,7 @@ class FredkinCell : public AbstractCell {
         // FredkinCell& operator= (FredkinCell&);
         FredkinCell* clone ();
         ~FredkinCell() = default;
-        ostream& display(ostream& os);
+        ostream& write (ostream& out) const;
 };
 
 #endif

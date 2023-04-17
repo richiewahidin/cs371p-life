@@ -7,6 +7,10 @@
 
 class Cell {
     
+    friend ostream& operator<<(ostream& lhs, const AbstractCell& rhs) {
+        return rhs.ptr->write(lhs);
+    };
+
     private:
         AbstractCell *ptr = nullptr;
     public:
@@ -17,7 +21,7 @@ class Cell {
         void mutate ();
         void clone(Cell& other);
         ~Cell();
-        ostream& display(ostream& os);
+    
 }
 
 #endif

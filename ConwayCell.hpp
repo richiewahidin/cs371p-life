@@ -5,6 +5,8 @@
 
 class ConwayCell : public AbstractCell {
 
+    protected:
+        ostream& write (ostream& out) const;
     public:
         ConwayCell(bool);
         ConwayCell(ConwayCell&);
@@ -12,7 +14,6 @@ class ConwayCell : public AbstractCell {
         int update(int cardinalNeighbors, int diagonalNeighbors);    
         ConwayCell* clone();
         ~ConwayCell() = default;
-        ostream& display(ostream& os);
 };
 
 #endif

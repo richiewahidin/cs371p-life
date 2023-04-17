@@ -33,14 +33,13 @@ FredkinCell* FredkinCell::clone() {
     return new FredkinCell(*this);
 }
 
-ostream& FredkinCell::display(ostream& os) {
+ostream& FredkinCell::write (ostream& out) const {
     char symbol; 
     if (_alive && _age >= 10) {
-        symbol = '+';
+        return out << '+';
     } else if (_alive) {
-        _age >> symbol;
+        return out << _age;
     } else {
-        symbol = '-';
+        return out << '-';
     }
-    return os << symbol;
 }
