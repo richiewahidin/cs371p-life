@@ -1,24 +1,16 @@
-#include "Life.hpp"
+// #include "Life.hpp"
 #include <iostream>
 #include <vector>
 
 using namespace std;
-
-
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        run_testcase();
-    }
-
-}
-
+// ostream& cout = cout;
 void run_testcase() {
+
+    // get input
     int r, c;
     cin >> r;
     cin  >> c;
+
     int n_live_cells;
     cin >> n_live_cells;
     vector<pair<int, int>> live_cell_coords(n_live_cells);
@@ -31,4 +23,27 @@ void run_testcase() {
     int n_sims, freq;
     cin >> n_sims;
     cin >> freq;
+
+    // Life life(r, c, live_cell_coords);
+    
+    // // run rounds 
+    // for (int curr_round = 0; curr_round < n_sims; ++curr_round) {
+    //     if (curr_round % freq == 0) {
+            
+    //     }
+        
+    // }
+
+
 }
+
+int main() {
+    int t;
+    cin >> t;
+    cout << t << endl;
+    while (t--) {
+        run_testcase();
+    }
+
+}
+
