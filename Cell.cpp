@@ -1,6 +1,10 @@
 
 #include "Cell.hpp"
 
+Cell::Cell() {
+    ptr = new FredkinCell(false);
+}
+
 Cell::Cell(bool isConway) : Cell(isConway, false) { assert(ptr); }
 
 Cell::Cell(bool isConway, bool isAlive) {
@@ -12,7 +16,7 @@ Cell::Cell(bool isConway, bool isAlive) {
     assert(ptr);
 }
 
-Cell::Cell(Cell& rhs) {
+Cell::Cell(const Cell& rhs) {
     ptr = (rhs.ptr)->clone();
 }
 

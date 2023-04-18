@@ -9,17 +9,17 @@
 class Cell {
     
     friend ostream& operator<<(ostream& lhs, const Cell& rhs) {
-        return lhs << rhs;
+        return lhs << *(rhs.ptr);
     };
 
     private:
         AbstractCell *ptr = nullptr;
     public:
-        Cell() = default;
+        Cell();
         Cell(bool isConway);
         Cell(bool isConway, bool isAlive);
         Cell(Cell&& rhs);
-        Cell(Cell& rhs);
+        Cell(const Cell& rhs);
         Cell& operator=(Cell& rhs);
         Cell& operator=(Cell&&);
         int update (int cardinalNeighbors, int diagonalNeighbors);
