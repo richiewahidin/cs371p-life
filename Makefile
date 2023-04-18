@@ -95,7 +95,7 @@ CLASS_FILES := \
 	ConwayCell.cpp \
 	FredkinCell.cpp \
 	Cell.cpp \
-	life.hpp
+	Life.hpp
 
 # compile run harness for Conway
 RunLifeConway: AbstractCell.cpp ConwayCell.cpp Cell.cpp Life.hpp RunLifeConway.cpp
@@ -234,7 +234,9 @@ clean:
 	rm -f  *.hpp.gch
 	rm -f  *.gen.txt
 	rm -f  *.tmp.txt
-	rm -f  RunLife
+	rm -f  RunLifeCell
+	rm -f  RunLifeConway
+	rm -f  RunLifeFredkin
 	rm -f  TestLife
 	rm -rf *.dSYM
 

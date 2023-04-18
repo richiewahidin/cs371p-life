@@ -1,4 +1,4 @@
-// #include "Life.hpp"
+#include "Life.hpp"
 #include <iostream>
 #include <vector>
 
@@ -24,7 +24,7 @@ void run_testcase() {
     cin >> n_sims;
     cin >> freq;
 
-    Life life(r, c, live_cell_coords);
+    Life<ConwayCell> life(r, c, live_cell_coords);
     cout << "*** Life<ConwayCell> " << r << "x" << c << " ***" << endl;
     cout << endl;
     

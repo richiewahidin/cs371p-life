@@ -34,7 +34,6 @@ FredkinCell* FredkinCell::clone() {
 }
 
 ostream& FredkinCell::write (ostream& out) const {
-    char symbol; 
     if (_alive && _age >= 10) {
         return out << '+';
     } else if (_alive) {

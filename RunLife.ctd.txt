@@ -1,0 +1,13 @@
+INT(1, 10, numtests) NEWLINE
+NEWLINE
+
+REPI(i, numtests)
+    INT(1, 20, numrows) SPACE INT(1, 20, numcols) NEWLINE
+    INT(1, 20, numcells) NEWLINE
+    REP(numcells)
+        INT(0, numrows-1) SPACE INT(0, numcols-1) NEWLINE
+    END
+    INT(1, 8, numcycles) SPACE INT(1, 2) NEWLINE
+    IF(i < numtests - 1) NEWLINE END
+END
+EOF

@@ -1,4 +1,0 @@
-git clone https://gitlab.com/gpdowning/cs371p-life-tests.git ../cs371p-Life-tests
-make ../cs371p-life-tests/gpdowning-RunLifeConway # change gpdowning to your GitLab-ID
-make[1]: Entering directory '/u/richie/cs371p/cs371p-life'
-make[1]: Leaving directory '/u/richie/cs371p/cs371p-life'
