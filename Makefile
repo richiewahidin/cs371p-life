@@ -139,7 +139,7 @@ endif
 
 # clone the Life test repo
 ../cs371p-life-tests:
-	git clone https://gitlab.com/gpdowning/cs371p-life-tests.git ../cs371p-Life-tests
+	git clone https://gitlab.com/gpdowning/cs371p-life-tests.git ../cs371p-life-tests
 
 # test files in the Life test repo
 T_FILES := `ls ../cs371p-Life-tests/*.in.txt`
