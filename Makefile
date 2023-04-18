@@ -142,7 +142,13 @@ endif
 	git clone https://gitlab.com/gpdowning/cs371p-life-tests.git ../cs371p-life-tests
 
 # test files in the Life test repo
-T_FILES := `ls ../cs371p-Life-tests/*.in.txt`
+T_FILES_CONWAY := `ls ../cs371p-life-tests/*-RunLifeConway.in.txt`
+
+# test files in the Life test repo
+T_FILES_FREDKIN := `ls ../cs371p-life-tests/*-RunLifeFredkin.in.txt`
+
+# test files in the Life test repo
+T_FILES_CELL := `ls ../cs371p-life-tests/*-RunLifeCell.in.txt`
 
 # generate a random input file
 ctd-generate:
@@ -185,8 +191,16 @@ run-cell: ../cs371p-life-tests
 	-make ../cs371p-life-tests/gpdowning-RunLifeCell # change gpdowning to your GitLab-ID
 
 # execute the run harness against all of the test files in the Life test repo and diff with the expected output
-run-all: ../cs371p-life-tests
-	-for v in $(T_FILES); do make $${v/.in.txt/}; done
+run-conway-all: ../cs371p-life-tests
+	-for v in $(T_FILES_CONWAY); do make $${v/.in.txt/}; done
+
+# execute the run harness against all of the test files in the Life test repo and diff with the expected output
+run-conway-fredkin: ../cs371p-life-tests
+	-for v in $(T_FILES_FREDKIN); do make $${v/.in.txt/}; done
+
+# execute the run harness against all of the test files in the Life test repo and diff with the expected output
+run-conway-cell: ../cs371p-life-tests
+	-for v in $(T_FILES_CELL); do make $${v/.in.txt/}; done
 
 # auto format the code
 format:

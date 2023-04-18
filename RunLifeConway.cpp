@@ -30,8 +30,6 @@ void run_testcase(ostream& debug) {
     cin >> n_sims;
     cin >> freq;
 
-    
-    
     debug << "n_sims: " << n_sims << ", freq: " << freq << endl;
     debug << endl;
 
@@ -43,11 +41,12 @@ void run_testcase(ostream& debug) {
     for (int curr_round = 0; curr_round <= n_sims; ++curr_round) {
         if (curr_round % freq == 0) {
             life.print(curr_round);
+            if (n_sims - curr_round >= freq) { // curr_round != n_sims
+                cout << endl;
+            }
         }
         life.do_round();
-        if (curr_round != n_sims) {
-            cout << endl;
-        }
+        
     }
     debug << endl;
 
