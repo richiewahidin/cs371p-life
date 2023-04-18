@@ -15,7 +15,7 @@ class Cell {
     private:
         AbstractCell *ptr = nullptr;
     public:
-        // Cell() = default;
+        Cell() = default;
         Cell(bool isConway);
         Cell(bool isConway, bool isAlive);
         Cell(Cell&& rhs);

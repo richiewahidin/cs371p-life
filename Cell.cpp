@@ -21,6 +21,10 @@ Cell::Cell(Cell&& rhs) {
 }
 
 Cell& Cell::operator=(Cell& rhs) {
+    if (ptr) {
+        delete ptr;
+        ptr = nullptr;
+    }
     ptr = (rhs.ptr)->clone();
     return *this;
 }
@@ -37,6 +41,7 @@ int Cell::update (int cardinalNeighbors, int diagonalNeighbors) {
     if (result == 2) {
         mutate();
     }
+    return 0;
 }
 
 // only if Life instantiated with Cell and reached the age of 2
