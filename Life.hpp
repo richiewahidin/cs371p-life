@@ -1,7 +1,7 @@
 #ifndef LIFE_HPP
 #define LIFE_HPP
 #include <vector>
-#include "Cell.hpp"
+// #include "Con.hpp"
 
 using namespace std;
 

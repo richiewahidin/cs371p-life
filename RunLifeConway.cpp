@@ -1,4 +1,5 @@
 #include "Life.hpp"
+#include "ConwayCell.hpp"
 #include <iostream>
 #include <vector>
 
