@@ -14,6 +14,7 @@ class AbstractCell {
         virtual ostream& write (ostream& out) const = 0;
 
     public:
+        AbstractCell() : _alive(false) {};
         AbstractCell(bool alive) : _alive(alive) {};
         virtual int update(int cardinalNeighbors, int diagonalNeighbors) = 0;
         // virtual AbstractCell& operator= (AbstractCell&) = 0;

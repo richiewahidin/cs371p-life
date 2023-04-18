@@ -2,6 +2,7 @@
 #define LIFE_HPP
 #include <vector>
 // #include "Con.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -35,11 +36,12 @@ class Life {
 
     public:
         Life(int r, int c, vector<pair<int, int>> live_cells) : 
+                grid(vector<vector<CellType>> (r + 2, vector<CellType> (c + 2))),
                 cardinal_neighbor_counts(r + 2, vector<int>(c + 2, 0)),
                 diagonal_neighbor_counts(r + 2, vector<int>(c + 2, 0)), 
                 population(0) {
             CellType og_live_cell(true);
-            grid = vector<vector<CellType>> (r + 2, vector<CellType> (c + 2, CellType(false)));
+   
             // for (int i = 0; i < r + 2; ++i) {
             //     vector<CellType> row;
             //     for (int j = 0; j < c + 2; ++j) {
@@ -52,7 +54,7 @@ class Life {
             for (size_t index = 0; index < live_cells.size(); ++index) {
                 pair<int, int> coords = live_cells[index];
                 if (!is_duplicate(live_cells, index)) { // only add live cell if there is not a live cell already
-                    grid[coords.first + 1][coords.second + 1] = *(og_live_cell.clone()); // + 1 for extra walls
+                    grid[coords.first + 1][coords.second + 1] = og_live_cell; // + 1 for extra walls
                     ++population;
                     update_neighbors(pair<int, int>(coords.first+ 1, coords.second + 1), 
                             1, cardinal_neighbor_counts, diagonal_neighbor_counts);
