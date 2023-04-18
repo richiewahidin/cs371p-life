@@ -1,20 +1,18 @@
 
 #include "Cell.hpp"
 
-Cell::Cell() {
-    ptr = new FredkinCell(false);
-}
+Cell::Cell() : Cell::Cell(false) { }
 
-Cell::Cell(bool isConway) : Cell(isConway, false) { assert(ptr); }
+Cell::Cell(bool alive) { ptr = new FredkinCell(alive); }
 
-Cell::Cell(bool isConway, bool isAlive) {
-    if (isConway) {
-        ptr = new ConwayCell(isAlive);
-    } else {
-        ptr = new FredkinCell(isAlive);
-    }
-    assert(ptr);
-}
+// Cell::Cell(bool isConway, bool isAlive) {
+//     if (isConway) {
+//         ptr = new ConwayCell(isAlive);
+//     } else {
+//         ptr = new FredkinCell(isAlive);
+//     }
+//     assert(ptr);
+// }
 
 Cell::Cell(const Cell& rhs) {
     ptr = (rhs.ptr)->clone();
@@ -44,8 +42,9 @@ int Cell::update (int cardinalNeighbors, int diagonalNeighbors) {
     int result = ptr->update(cardinalNeighbors, diagonalNeighbors);
     if (result == 2) {
         mutate();
+        return 0;
     }
-    return 0;
+    return result;
 }
 
 // only if Life instantiated with Cell and reached the age of 2

@@ -16,8 +16,8 @@ class Cell {
         AbstractCell *ptr = nullptr;
     public:
         Cell();
-        Cell(bool isConway);
-        Cell(bool isConway, bool isAlive);
+        Cell(bool alive);
+        // Cell(bool isConway, bool isAlive);
         Cell(Cell&& rhs);
         Cell(const Cell& rhs);
         Cell& operator=(Cell& rhs);
