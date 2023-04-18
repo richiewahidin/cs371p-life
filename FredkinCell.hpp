@@ -8,8 +8,8 @@ class FredkinCell : public AbstractCell {
     private:
         int _age;
     public:
+        FredkinCell() = default;
         FredkinCell(bool);
-        FredkinCell(FredkinCell&);
         int update(int cardinalNeighbors, int diagonalNeighbors);
         // FredkinCell& operator= (FredkinCell&);
         FredkinCell* clone ();

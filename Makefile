@@ -195,11 +195,11 @@ run-conway-all: ../cs371p-life-tests
 	-for v in $(T_FILES_CONWAY); do make $${v/.in.txt/}; done
 
 # execute the run harness against all of the test files in the Life test repo and diff with the expected output
-run-conway-fredkin: ../cs371p-life-tests
+run-fredkin-all: ../cs371p-life-tests
 	-for v in $(T_FILES_FREDKIN); do make $${v/.in.txt/}; done
 
 # execute the run harness against all of the test files in the Life test repo and diff with the expected output
-run-conway-cell: ../cs371p-life-tests
+run-cell-all: ../cs371p-life-tests
 	-for v in $(T_FILES_CELL); do make $${v/.in.txt/}; done
 
 # auto format the code

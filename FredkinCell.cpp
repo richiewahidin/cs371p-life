@@ -2,8 +2,6 @@
 
 FredkinCell::FredkinCell(bool alive) : AbstractCell(alive), _age(0) {}
 
-FredkinCell::FredkinCell(FredkinCell& other) : AbstractCell(other._alive), _age(other._age) {}
-
 int FredkinCell::update(int cardinalNeighbors, int diagonalNeighbors) {
     if (_alive) {
         if (cardinalNeighbors == 1 || cardinalNeighbors == 3) {
