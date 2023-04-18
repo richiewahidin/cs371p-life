@@ -98,7 +98,6 @@ class Life {
                 }
                 cout << endl;
             }
-            cout << endl;
         }
 
 
