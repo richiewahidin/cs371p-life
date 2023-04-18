@@ -2,7 +2,7 @@
 
 ConwayCell::ConwayCell(bool alive) : AbstractCell(alive){}
 
-ConwayCell::ConwayCell(ConwayCell& other) : AbstractCell(other._alive){} 
+// ConwayCell::ConwayCell(ConwayCell& other) : AbstractCell(other._alive){} 
 
 // ConwayCell& ConwayCell::operator=(ConwayCell& rhs) = default;
 
