@@ -141,18 +141,18 @@ endif
 ../cs371p-life-tests:
 	git clone https://gitlab.com/gpdowning/cs371p-life-tests.git ../cs371p-life-tests
 
-# test files in the Life test repo
+# test files for RunLifeConway in the life test repo
 T_FILES_CONWAY := `ls ../cs371p-life-tests/*-RunLifeConway.in.txt`
 
-# test files in the Life test repo
+# test files for RunLifeFredkin in the Life test repo
 T_FILES_FREDKIN := `ls ../cs371p-life-tests/*-RunLifeFredkin.in.txt`
 
-# test files in the Life test repo
+# test files for RunLifeCell in the Life test repo
 T_FILES_CELL := `ls ../cs371p-life-tests/*-RunLifeCell.in.txt`
 
 # generate a random input file
 ctd-generate:
-	$(CHECKTESTDATA) -g RunLife.ctd.txt >> richiewahidin-RunLife.in.txt
+	$(CHECKTESTDATA) -g RunLife.ctd.txt >> richiewahidin-RunLifeCell.in.txt
 
 # execute the run harness against a test file in the Life test repo and diff
 # with the expected output for Conway
@@ -177,28 +177,31 @@ ctd-generate:
 
 # execute the run harness against your test files in the Life test repo and diff with the expected output
 run: ../cs371p-life-tests
-	-make run-conway
-	-make run-fredkin
-	-make run-cell
+	-make run-conway-all
+	-make run-fredkin-all
+	-make run-cell-all
 
 run-conway: ../cs371p-life-tests
-	-make ../cs371p-life-tests/gpdowning-RunLifeConway # change gpdowning to your GitLab-ID
+	-make ../cs371p-life-tests/richiewahidin-RunLifeConway # change gpdowning to your GitLab-ID
 
 run-fredkin: ../cs371p-life-tests
-	-make ../cs371p-life-tests/gpdowning-RunLifeFredkin # change gpdowning to your GitLab-ID
+	-make ../cs371p-life-tests/richiewahidin-RunLifeFredkin # change gpdowning to your GitLab-ID
 
 run-cell: ../cs371p-life-tests
-	-make ../cs371p-life-tests/gpdowning-RunLifeCell # change gpdowning to your GitLab-ID
+	-make ../cs371p-life-tests/richiewahidin-RunLifeCell # change gpdowning to your GitLab-ID
 
-# execute the run harness against all of the test files in the Life test repo and diff with the expected output
+# execute the run harness against all of the test files in the Life test repo
+# for Conway and diff with the expected output
 run-conway-all: ../cs371p-life-tests
 	-for v in $(T_FILES_CONWAY); do make $${v/.in.txt/}; done
 
-# execute the run harness against all of the test files in the Life test repo and diff with the expected output
+# execute the run harness against all of the test files in the Life test repo
+# for Fredkin and diff with the expected output
 run-fredkin-all: ../cs371p-life-tests
 	-for v in $(T_FILES_FREDKIN); do make $${v/.in.txt/}; done
 
-# execute the run harness against all of the test files in the Life test repo and diff with the expected output
+# execute the run harness against all of the test files in the Life test repo
+# for Cell and diff with the expected output
 run-cell-all: ../cs371p-life-tests
 	-for v in $(T_FILES_CELL); do make $${v/.in.txt/}; done
 

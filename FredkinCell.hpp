@@ -7,14 +7,17 @@ class FredkinCell : public AbstractCell {
 
     private:
         int _age;
+
+    protected:
+        ostream& write (ostream& out) const;
+
     public:
         FredkinCell() = default;
         FredkinCell(bool);
         int update(int cardinalNeighbors, int diagonalNeighbors);
-        // FredkinCell& operator= (FredkinCell&);
         FredkinCell* clone ();
         ~FredkinCell() = default;
-        ostream& write (ostream& out) const;
+        
 };
 
 #endif

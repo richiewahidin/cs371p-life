@@ -1,6 +1,7 @@
 #ifndef ABSTRACT_CELL_HPP
 #define ABSTRACT_CELL_HPP
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 class AbstractCell {
@@ -17,11 +18,9 @@ class AbstractCell {
         AbstractCell() : _alive(false) {};
         AbstractCell(bool alive) : _alive(alive) {};
         virtual int update(int cardinalNeighbors, int diagonalNeighbors) = 0;
-        // virtual AbstractCell& operator= (AbstractCell&) = 0;
         virtual AbstractCell* clone() = 0;
         virtual ~AbstractCell() = default;
 
 };
-
 
 #endif

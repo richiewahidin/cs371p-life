@@ -14,14 +14,12 @@ class Cell {
 
     private:
         AbstractCell *ptr = nullptr;
+        
     public:
         Cell();
         Cell(bool alive);
-        // Cell(bool isConway, bool isAlive);
-        Cell(Cell&& rhs);
         Cell(const Cell& rhs);
         Cell& operator=(Cell& rhs);
-        Cell& operator=(Cell&&);
         int update (int cardinalNeighbors, int diagonalNeighbors);
         void mutate ();
         void clone(Cell& other);

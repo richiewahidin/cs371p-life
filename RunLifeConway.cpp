@@ -5,67 +5,58 @@
 #include <vector>
 
 using namespace std;
-// ofstream& debug;
-void run_testcase(ostream& debug) {
-    // get input
+
+void run_testcase() {
+    // Get size of grid and number of live cells
     int r, c;
     cin >> r;
     cin  >> c;
-
-    int n_live_cells;
+     int n_live_cells;
     cin >> n_live_cells;
+
+    // Get the coordinates of the live cells
     vector<pair<int, int>> live_cell_coords;
-    // live_cell_coords.capacity(n_live_cells);
-    debug << "Live cell coords:" << endl;
-    debug << "Number of live cell coordinates reading: " << n_live_cells << endl;
     for (int live_cell_idx = 0; live_cell_idx < n_live_cells; ++live_cell_idx) {
         int x, y;
         cin >> x;
         cin >> y;
         live_cell_coords.push_back(pair<int, int>(x, y));
-        debug << "x, y = " << x << ", " << y << endl;
     }
-    debug << "size of coord vector: " << live_cell_coords.size() << endl;
+
+    // Get number of simulations and print frequency
     int n_sims, freq;
     cin >> n_sims;
     cin >> freq;
 
-    debug << "n_sims: " << n_sims << ", freq: " << freq << endl;
-    debug << endl;
-
-
     Life<ConwayCell> life(r, c, live_cell_coords);
     cout << "*** Life<ConwayCell> " << r << "x" << c << " ***" << endl;
-    cout << endl;    
-    // run rounds 
+    cout << endl;  
+
+    // Run rounds 
     for (int curr_round = 0; curr_round <= n_sims; ++curr_round) {
         if (curr_round % freq == 0) {
             life.print(curr_round);
-            if (n_sims - curr_round >= freq) { // curr_round != n_sims
+
+            // Print new line if it is not the last print of the current simulation
+            if (n_sims - curr_round >= freq) {
                 cout << endl;
             }
         }
+
         life.do_round();
         
     }
-    debug << endl;
-
 }
 
 int main() {
-    ofstream debug;
-    debug.open("debug.txt");
-    debug << "Writing this to a file.\n";
-  
     int t;
     cin >> t;
+
+    // Repeat for number of testscases
     while (t--) {
-        run_testcase(debug);
+        run_testcase();
         if (t) {
             cout << endl;
         }
     }
-    debug.close();
-
 }
-

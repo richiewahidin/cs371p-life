@@ -1,25 +1,11 @@
-
 #include "Cell.hpp"
 
 Cell::Cell() : Cell::Cell(false) { }
 
 Cell::Cell(bool alive) { ptr = new FredkinCell(alive); }
 
-// Cell::Cell(bool isConway, bool isAlive) {
-//     if (isConway) {
-//         ptr = new ConwayCell(isAlive);
-//     } else {
-//         ptr = new FredkinCell(isAlive);
-//     }
-//     assert(ptr);
-// }
-
 Cell::Cell(const Cell& rhs) {
     ptr = (rhs.ptr)->clone();
-}
-
-Cell::Cell(Cell&& rhs) {
-    std::swap((*this).ptr, rhs.ptr);
 }
 
 Cell& Cell::operator=(Cell& rhs) {
@@ -28,12 +14,6 @@ Cell& Cell::operator=(Cell& rhs) {
         ptr = nullptr;
     }
     ptr = (rhs.ptr)->clone();
-    return *this;
-}
-
-Cell& Cell::operator=(Cell&& rhs) {
-    Cell that(std::move(rhs));
-    std::swap((*this).ptr, that.ptr);
     return *this;
 }
 
@@ -47,12 +27,12 @@ int Cell::update (int cardinalNeighbors, int diagonalNeighbors) {
     return result;
 }
 
-// only if Life instantiated with Cell and reached the age of 2
+// Change from live Fredkin Cell to Live Conway Cell
 void Cell::mutate() {
     assert(ptr);
-    // delete the fredkin cell
+    // Delete the fredkin cell
     delete ptr;
-    // create a new conway cell
+    // Create a new conway cell
     ptr = new ConwayCell(true);
 }
 

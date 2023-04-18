@@ -6,7 +6,7 @@
 
 * GitLab ID: richiewahidin, abbey_t
 
-* HackerRank ID: richiewahidin
+* HackerRank ID: attruong00
 
 * Git SHA: 
 
@@ -14,6 +14,6 @@
 
 * Estimated completion time: 13.0
 
-* Actual completion time:
+* Actual completion time: 12.0
 
 * Comments: (any additional comments you have)
