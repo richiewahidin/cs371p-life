@@ -13,8 +13,8 @@ class FredkinCell : public AbstractCell {
 
     public:
         FredkinCell() = default;
-        FredkinCell(bool);
-        int update(int, int);
+        FredkinCell(bool alive);
+        int update(int cardinalNeighbors, int diagonalNeighbors);
         FredkinCell* clone ();
         ~FredkinCell() = default;
         

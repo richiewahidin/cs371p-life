@@ -108,4 +108,3 @@ class Life {
 };
 
 #endif
-

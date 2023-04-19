@@ -16,8 +16,8 @@ class AbstractCell {
 
     public:
         AbstractCell();
-        AbstractCell(bool);
-        virtual int update(int, int) = 0;
+        AbstractCell(bool alive);
+        virtual int update(int cardinalNeighbors, int diagonalNeighbors) = 0;
         virtual AbstractCell* clone() = 0;
         virtual ~AbstractCell() = default;
 
