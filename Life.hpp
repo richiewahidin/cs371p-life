@@ -34,6 +34,17 @@ class Life {
             new_diagonal_neighbors[coords.first + 1][coords.second + 1] += update_amt;
         }
 
+        // Function returns true if there is already a live cell in that spot in
+        // the grid, returns false otherwise
+        bool is_duplicate(vector<pair<int, int>> live_cells, int index) {
+            for (int i = 0; i < index; ++i) {
+                if (live_cells[i] == live_cells[index]) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     public:
 
         // Initializer list sets all cells in the grid to dead cells
@@ -54,17 +65,6 @@ class Life {
                             1, cardinal_neighbor_counts, diagonal_neighbor_counts);
                 }
             }
-        }
-
-        // Function returns true if there is already a live cell in that spot in
-        // the grid, returns false otherwise
-        bool is_duplicate(vector<pair<int, int>> live_cells, int index) {
-            for (int i = 0; i < index; ++i) {
-                if (live_cells[i] == live_cells[index]) {
-                    return true;
-                }
-            }
-            return false;
         }
 
         // Updates the whole grid for one round
