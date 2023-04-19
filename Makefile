@@ -115,6 +115,11 @@ RunLifeCell: AbstractCell.cpp Cell.cpp Life.hpp RunLifeCell.cpp
 # compile test harness
 TestLife: 	AbstractCell.cpp ConwayCell.cpp FredkinCell.cpp Cell.cpp Life.hpp TestLife.cpp
 	-$(CPPCHECK) TestLife.cpp
+	-$(CPPCHECK) ConwayCell.cpp
+	-$(CPPCHECK) FredkinCell.cpp
+	-$(CPPCHECK) AbstractCell.cpp
+	-$(CPPCHECK) Cell.cpp
+	-$(CPPCHECK) Life.hpp
 	$(CXX) $(CXXFLAGS) $(CLASS_FILES) TestLife.cpp -o TestLife $(LDFLAGS)
 
 # run/test files, compile with make all
@@ -132,9 +137,10 @@ test: TestLife
 	$(VALGRIND) ./TestLife
 ifeq ($(shell uname -s), Life)
 	$(GCOV) TestLife.cpp | grep -B 2 "hpp.gcov"
+	$(GCOV) TestLife.cpp | grep -B 2 "hpp.gcov"
 else
-	gcc -c --coverage Life.hpp
-	$(GCOV) -b TestLife-TestLife.cpp | grep -B 4 "cpp.gcov"
+	$(GCOV) TestLife-TestLife.cpp | grep -B 2 "hpp.gcov"
+	$(GCOV) *.gcda | grep -B 2 "cpp.gcov"
 endif
 
 # clone the Life test repo
