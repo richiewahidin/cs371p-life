@@ -1,5 +1,14 @@
 #include "Cell.hpp"
 
+// Change from live Fredkin Cell to Live Conway Cell
+void Cell::mutate() {
+    assert(ptr);
+    // Delete the fredkin cell
+    delete ptr;
+    // Create a new conway cell
+    ptr = new ConwayCell(true);
+}
+
 Cell::Cell() : Cell::Cell(false) { }
 
 Cell::Cell(bool alive) { ptr = new FredkinCell(alive); }
@@ -25,15 +34,6 @@ int Cell::update (int cardinalNeighbors, int diagonalNeighbors) {
         return 0;
     }
     return result;
-}
-
-// Change from live Fredkin Cell to Live Conway Cell
-void Cell::mutate() {
-    assert(ptr);
-    // Delete the fredkin cell
-    delete ptr;
-    // Create a new conway cell
-    ptr = new ConwayCell(true);
 }
 
 void Cell::clone(Cell& other) {

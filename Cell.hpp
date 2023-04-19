@@ -14,6 +14,7 @@ class Cell {
 
     private:
         AbstractCell *ptr = nullptr;
+        void mutate ();
         
     public:
         Cell();
@@ -21,7 +22,6 @@ class Cell {
         Cell(const Cell& rhs);
         Cell& operator=(Cell& rhs);
         int update (int cardinalNeighbors, int diagonalNeighbors);
-        void mutate ();
         void clone(Cell& other);
         ~Cell();
     
