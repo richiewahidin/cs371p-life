@@ -11,3 +11,6 @@ RunLifeCell
 TestLife
 .vscode/
 settings.json
+debug.txt
+gpdowning-RunLifeCell.in.txt
+gpdowning-RunLifeCell.out.txt

@@ -21,7 +21,7 @@ int FredkinCell::update(int cardinalNeighbors, int diagonalNeighbors) {
         // Live cell remain alive
         if (cardinalNeighbors == 1 || cardinalNeighbors == 3) {
             ++_age;
-            if (_age == 2) { // for cell toknow when to mutate
+            if (_age == 2) { // for cell to know when to mutate
                 return 2;
             } else {
                 return 0;
