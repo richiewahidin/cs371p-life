@@ -12,12 +12,12 @@ class AbstractCell {
 
     protected:
         bool _alive; // 0 dead 1 alive
-        virtual ostream& write (ostream& out) const = 0;
+        virtual ostream& write (ostream&) const = 0;
 
     public:
-        AbstractCell() : _alive(false) {};
-        AbstractCell(bool alive) : _alive(alive) {};
-        virtual int update(int cardinalNeighbors, int diagonalNeighbors) = 0;
+        AbstractCell();
+        AbstractCell(bool);
+        virtual int update(int, int) = 0;
         virtual AbstractCell* clone() = 0;
         virtual ~AbstractCell() = default;
 

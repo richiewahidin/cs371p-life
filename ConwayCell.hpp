@@ -12,7 +12,7 @@ class ConwayCell : public AbstractCell {
     public:
         ConwayCell() = default;
         ConwayCell(bool);
-        int update(int cardinalNeighbors, int diagonalNeighbors);    
+        int update(int, int);    
         ConwayCell* clone();
         ~ConwayCell() = default;
         

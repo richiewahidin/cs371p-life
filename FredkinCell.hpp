@@ -14,7 +14,7 @@ class FredkinCell : public AbstractCell {
     public:
         FredkinCell() = default;
         FredkinCell(bool);
-        int update(int cardinalNeighbors, int diagonalNeighbors);
+        int update(int, int);
         FredkinCell* clone ();
         ~FredkinCell() = default;
         
