@@ -178,9 +178,11 @@ TEST(FredkinFixture, FredkinClone0) {
     ss.str("");
 
     FredkinCell f2(false);
-    f2 = *f1.clone();
+    FredkinCell *ptr = f1.clone();
+    f2 = *ptr;
     ss << f2;
     ASSERT_EQ("2", ss.str());
+    delete ptr;
 }
 
 // ************** Cell Tests **************
