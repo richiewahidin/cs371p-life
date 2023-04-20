@@ -26,8 +26,8 @@ int FredkinCell::update(int cardinalNeighbors, int diagonalNeighbors) {
             } else {
                 return 0;
             }
-        
-        // Live cell dies
+
+            // Live cell dies
         } else {
             _alive = false;
             return -1;
@@ -39,8 +39,8 @@ int FredkinCell::update(int cardinalNeighbors, int diagonalNeighbors) {
         if (cardinalNeighbors == 1 || cardinalNeighbors == 3) {
             _alive = true;
             return 1;
-        
-        // Dead cell remains dead
+
+            // Dead cell remains dead
         } else {
             return 0;
         }

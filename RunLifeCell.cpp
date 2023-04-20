@@ -11,7 +11,7 @@ void run_testcase() {
     int r, c;
     cin >> r;
     cin  >> c;
-     int n_live_cells;
+    int n_live_cells;
     cin >> n_live_cells;
 
     // Get the coordinates of the live cells
@@ -30,9 +30,9 @@ void run_testcase() {
 
     Life<Cell> life(r, c, live_cell_coords);
     cout << "*** Life<Cell> " << r << "x" << c << " ***" << endl;
-    cout << endl;  
+    cout << endl;
 
-    // Run rounds 
+    // Run rounds
     for (int curr_round = 0; curr_round <= n_sims; ++curr_round) {
         if (curr_round % freq == 0) {
             life.print(curr_round);
@@ -44,7 +44,7 @@ void run_testcase() {
         }
 
         life.do_round();
-        
+
     }
 }
 

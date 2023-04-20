@@ -8,7 +8,7 @@
 #include <vector>
 using namespace std;
 
-// ************** Conway Tests ************** 
+// ************** Conway Tests **************
 
 // constructor and write
 TEST(ConwayFixture, ConwayTest0) {
@@ -183,7 +183,7 @@ TEST(FredkinFixture, FredkinClone0) {
     ASSERT_EQ("2", ss.str());
 }
 
-// ************** Cell Tests ************** 
+// ************** Cell Tests **************
 TEST(CellFixture, CellDefaultConstructor0) {
     stringstream ss;
     Cell c;
@@ -261,7 +261,7 @@ TEST(CellFixture, CellClone0) {
     ASSERT_EQ(".", ss.str());
 }
 
-// ************** Life Tests ************** 
+// ************** Life Tests **************
 TEST(LifeFixture, LifeTest0) {
     stringstream redirect_stream;
     streambuf* old_buf = cout.rdbuf(redirect_stream.rdbuf());
@@ -275,7 +275,7 @@ TEST(LifeFixture, LifeTest0) {
     );
     life.print(0);
     string exp_str = "Generation = 0, Population = 1."
-        "\n.*\n..\n";
+                     "\n.*\n..\n";
 
     ASSERT_EQ(exp_str, redirect_stream.str());
 
@@ -284,7 +284,7 @@ TEST(LifeFixture, LifeTest0) {
     life.do_round();
     life.print(1);
     exp_str = "Generation = 1, Population = 0."
-        "\n..\n..\n";
+              "\n..\n..\n";
 
     ASSERT_EQ(exp_str, redirect_stream.str());
     cout.rdbuf(old_buf);

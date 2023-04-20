@@ -7,24 +7,24 @@
 #include "FredkinCell.hpp"
 
 class Cell {
-    
+
     friend ostream& operator<<(ostream& lhs, const Cell& rhs) {
         return lhs << *(rhs.ptr);
     };
 
-    private:
-        AbstractCell *ptr = nullptr;
-        void mutate ();
-        
-    public:
-        Cell();
-        Cell(bool alive);
-        Cell(const Cell& rhs);
-        Cell& operator=(Cell& rhs);
-        int update (int cardinalNeighbors, int diagonalNeighbors);
-        void clone(Cell& other);
-        ~Cell();
-    
+private:
+    AbstractCell *ptr = nullptr;
+    void mutate ();
+
+public:
+    Cell();
+    Cell(bool alive);
+    Cell(const Cell& rhs);
+    Cell& operator=(Cell& rhs);
+    int update (int cardinalNeighbors, int diagonalNeighbors);
+    void clone(Cell& other);
+    ~Cell();
+
 };
 
 #endif

@@ -11,7 +11,9 @@ void Cell::mutate() {
 
 Cell::Cell() : Cell::Cell(false) { }
 
-Cell::Cell(bool alive) { ptr = new FredkinCell(alive); }
+Cell::Cell(bool alive) {
+    ptr = new FredkinCell(alive);
+}
 
 Cell::Cell(const Cell& rhs) {
     ptr = (rhs.ptr)->clone();

@@ -5,7 +5,7 @@ ostream& ConwayCell::write (ostream& out) const {
     return out << symbol;
 };
 
-ConwayCell::ConwayCell(bool alive) : AbstractCell(alive){}
+ConwayCell::ConwayCell(bool alive) : AbstractCell(alive) {}
 
 int ConwayCell::update(int cardinalNeighbors, int diagonalNeighbors) {
 
@@ -18,7 +18,7 @@ int ConwayCell::update(int cardinalNeighbors, int diagonalNeighbors) {
         _alive = false;
         return -1;
 
-    // Dead cell becomes alive
+        // Dead cell becomes alive
     } else if (!_alive && totalNeighbors == 3) {
         _alive = true;
         return 1;

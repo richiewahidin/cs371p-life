@@ -5,19 +5,19 @@
 
 class FredkinCell : public AbstractCell {
 
-    private:
-        int _age;
+private:
+    int _age;
 
-    protected:
-        ostream& write (ostream& out) const;
+protected:
+    ostream& write (ostream& out) const;
 
-    public:
-        FredkinCell() = default;
-        FredkinCell(bool alive);
-        int update(int cardinalNeighbors, int diagonalNeighbors);
-        FredkinCell* clone ();
-        ~FredkinCell() = default;
-        
+public:
+    FredkinCell() = default;
+    FredkinCell(bool alive);
+    int update(int cardinalNeighbors, int diagonalNeighbors);
+    FredkinCell* clone ();
+    ~FredkinCell() = default;
+
 };
 
 #endif

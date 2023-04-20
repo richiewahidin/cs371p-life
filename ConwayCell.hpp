@@ -6,16 +6,16 @@
 
 class ConwayCell : public AbstractCell {
 
-    protected:
-        ostream& write (ostream& out) const;
+protected:
+    ostream& write (ostream& out) const;
 
-    public:
-        ConwayCell() = default;
-        ConwayCell(bool alive);
-        int update(int cardinalNeighbors, int diagonalNeighbors);    
-        ConwayCell* clone();
-        ~ConwayCell() = default;
-        
+public:
+    ConwayCell() = default;
+    ConwayCell(bool alive);
+    int update(int cardinalNeighbors, int diagonalNeighbors);
+    ConwayCell* clone();
+    ~ConwayCell() = default;
+
 };
 
 #endif
