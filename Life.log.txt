@@ -1,0 +1,245 @@
+commit 55a0c2f6f24180534d36790ba285dd13cb34981f
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Apr 19 20:13:21 2023 -0500
+
+    format with astyle and documented with doxygen, Closes #13
+
+commit 28cda885fc40796dd53d23ad0b6fec1045edee65
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Apr 19 18:30:04 2023 -0500
+
+    fixed UML svg file
+
+commit 848363ab3d362af60b06ca7eb2007a709d12cb96
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Wed Apr 19 18:27:16 2023 -0500
+
+    wrote unit tests, Closes #14
+
+commit 393c3767a4817cdc84d347fe5f8ed787906e9a81
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Wed Apr 19 18:26:31 2023 -0500
+
+    update SVG to reflect private mutate
+
+commit 5930d16182d464a7650313f6d6df1efc90c85c4f
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Wed Apr 19 18:26:06 2023 -0500
+
+    move mutate to private
+
+commit dc1d63b875cd008cd294248d3e5503e1635cb6f5
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Wed Apr 19 17:29:03 2023 -0500
+
+    fix Makefile test recipe
+
+commit 8864764bddbadf0fd7aeb0bdec3ce86391741452
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Apr 19 16:32:53 2023 -0500
+
+    added UML diagram, Closes #10
+
+commit f480d0fae19e06f3eb0fd8a08d14bffbe76e3c13
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Apr 19 15:34:33 2023 -0500
+
+    cleaned up code
+
+commit 4ed8a3ff55033b06e4b4b5980912b88f400263d9
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Apr 19 15:31:21 2023 -0500
+
+    move AbstractCell constructors to .cpp file
+
+commit 5e086722679e2b048e64bc1793d33fd62b0c5bfb
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 17:04:20 2023 -0500
+
+    Cleaned up code, added asserts and comments, Closes #11, #12
+
+commit 51ba70b682cca0aa352c292fdafda1f7fa87c5dd
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 15:32:42 2023 -0500
+
+    created HackerRank submissions, passing all tests, Closes #7, #16
+
+commit feb20a2fe0351398e98796d42ddee5bafe9efc2f
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 15:19:13 2023 -0500
+
+    fixed bug in Cell update to return correct neighbor count update
+
+commit 8c5642b0967ada6d57626a8b8918a2dfdc520b30
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 15:10:23 2023 -0500
+
+    Cell is compiling but failing
+
+commit ecaf3ee6bf192d64732a4800e7e6ecaab07ea789
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 14:57:36 2023 -0500
+
+    Working on implementing RunLifeCell.cpp
+
+commit 56e3bbb0fd95c574d685d61a830118e967ca3685
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 14:51:09 2023 -0500
+
+    Finished implementing RunLifeFredkin.cpp, #7
+
+commit b0c63bb45442c24631058193775e53f02b77c1f6
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 14:45:48 2023 -0500
+
+    Finish implementation of RunLifeConway, #7
+
+commit 6187f9f3ee224fb0f622983850d698f9deee2a99
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 12:45:43 2023 -0500
+
+    gpdowning test case for RunConway is working, #6
+
+commit 10844ab4bd7d2b12b92f3f45050753b2a166953e
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 12:11:08 2023 -0500
+
+    fixed compile error by removing wrong signature for copy constructor
+
+commit 9eb0acb1677aa71a67798f59ff8149d5a1600a3e
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 12:10:36 2023 -0500
+
+    fix typo
+
+commit a7ddc8b0a10081845e01bba768beed8844a932ac
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Tue Apr 18 11:59:08 2023 -0500
+
+    trying to fix issue in life
+
+commit 808ac2cf3cc66dcf1d7fe05f8851e36382580068
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Tue Apr 18 11:33:07 2023 -0500
+
+    docker not working so pushing current chnages
+
+commit 0fae017a79ae231facba669ecb72c407d6ceaeb9
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Mon Apr 17 22:03:35 2023 -0500
+
+    compile error static assertion failed
+
+commit 632dbc523c090efbc179fdb14dc76c6f7f442d4d
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Mon Apr 17 16:53:34 2023 -0500
+
+    Initial implementation of RunLifeConway, #7
+
+commit e10421bd4987432c6a02758e46169c9f7a47436f
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Mon Apr 17 16:48:13 2023 -0500
+
+    input reads correctly, Closes #22
+
+commit 23353b0af2ae2e57dbcc7ab8785531f51ef4434a
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Mon Apr 17 16:18:30 2023 -0500
+
+    initial implementation of input reading, #22
+
+commit 3f2ce06e7b2bb9c26c08fbbe6c6234c38e63ba0b
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Mon Apr 17 16:15:14 2023 -0500
+
+    finish implementing output and sim for Life, Closes #21, #6
+
+commit d6a9b4bee8e0dc47bd3ddeae510f0cd9e42ed1f6
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sun Apr 16 23:08:51 2023 -0500
+
+    implemented display for Cell
+
+commit 25e08df40f4f99fe66ca415bcb25d94803b2415a
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Sun Apr 16 23:06:00 2023 -0500
+
+    implement display for ConwayCell and Fredkin
+
+commit 04ec037a0cc31a27683da2ca05278f711fb132de
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sat Apr 15 23:03:24 2023 -0500
+
+    Change update method to take cardinal and diagonal neighbors, Closes #20
+
+commit df439e788286906ccbc193294f689714b9c08a6a
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sat Apr 15 21:41:29 2023 -0500
+
+    Life in progress
+
+commit 73fd8b9d0332dc7906623f1de66706ebdf25349a
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sat Apr 15 21:21:34 2023 -0500
+
+    Improved OO design, Closes #18,#19
+
+commit b3faa3ea0409706aba5e37abf43dfeed8c8b747f
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 22:40:38 2023 -0500
+
+    Made changes to implementation of Cell
+
+commit 8160152a279b6c10d7caa2d4c61a525c2ed2bf47
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 15:51:22 2023 -0500
+
+    Initial implementation of cell Closes #4
+
+commit 8a652eb6c11b192e4402121ee17c7292cba2fdb0
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 14:52:00 2023 -0500
+
+    Initial implementation of Fredkin Closes #3
+
+commit 65453d15ad72be90f53582192c283421229d4aec
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Thu Apr 13 14:37:45 2023 -0500
+
+    initial implementation of ConwayCell with some modifications to AbstractCell, Closes #2
+
+commit 141e96beaa254203ca2f209c9d0c4bb03d00f3dd
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 12:54:13 2023 -0500
+
+    Wrote Makefile Closes #17
+
+commit 2d90f11df15d912dc60a221e9a15f25d318ef96b
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 12:21:21 2023 -0500
+
+    Made changes to AbstractCell, started with ConwayCell
+
+commit ccae692ad35b02089c5004f6b5acb2912fcf6243
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 12:06:22 2023 -0500
+
+    closes issue #5
+
+commit 3e1db6706098b8f78baee59093e5972214e9e116
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Apr 13 11:47:30 2023 -0500
+
+    updated build files
+
+commit fdc73e8564db6a80d5b26dfa8e7b623a034128b8
+Author: attruong00 <57568294+attruong00@users.noreply.github.com>
+Date:   Thu Apr 13 11:35:54 2023 -0500
+
+    add files
+
+commit 46d23fc7dbfe99e061458763fbe9300742383034
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Thu Apr 13 15:55:59 2023 +0000
+
+    Initial commit
