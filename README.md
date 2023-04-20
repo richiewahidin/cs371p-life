@@ -8,7 +8,7 @@
 
 * HackerRank ID: attruong00
 
-* Git SHA: 55a0c2f6f24180534d36790ba285dd13cb34981f
+* Git SHA: c771c2f07a3b247a6dd605362134243b63e5934c
 
 * GitLab Pipelines: https://gitlab.com/richiewahidin/cs371p-life/-/pipelines
 
